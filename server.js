@@ -219,11 +219,19 @@ app.post("/generate-pptx", async (req, res) => {
         // Create PowerPoint
         const fileName = "office-farewell-presentation.pptx";
 
-        await pptx.writeFile({
-            fileName: fileName
+        const buffer = await pptx.write({
+            outputType: "nodebuffer"
         });
 
-        res.download(fileName, fileName);
+        res.set({
+            "Content-Type":
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "Content-Disposition":
+                `attachment; filename="${fileName}"`,
+            "Content-Length": buffer.length
+        });
+
+        res.send(buffer);
 
     } catch (error) {
 
@@ -238,10 +246,4 @@ app.post("/generate-pptx", async (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-
-    console.log(
-        `Server running at http://localhost:${PORT}`
-    );
-
-});
+module.exports = app;
