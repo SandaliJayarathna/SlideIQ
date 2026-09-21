@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const pptxgen = require("pptxgenjs");
 
 const app = express();
@@ -6,35 +7,36 @@ const PORT = 3000;
 
 app.use(express.json({ limit: "50mb" }));
 
-const path = require("path");
+app.use(express.static(__dirname));
 
-app.use(express.static(path.join(__dirname, "..")));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
 
 app.post("/generate-pptx", async (req, res) => {
-
     try {
-
         const data = req.body;
 
         const pptx = new pptxgen();
 
         pptx.layout = "LAYOUT_WIDE";
-        pptx.author = "Presentation Generator";
-        pptx.title = "Office Farewell";
+        pptx.author = "SlideIQ";
+        pptx.title = "Office Farewell Presentation";
 
-        // Slide 1 - Cover
+        // Slide 1
         let slide = pptx.addSlide();
 
         slide.background = { color: "F7F1E8" };
 
-        slide.addText("Celebrating the Journey of", {
+        slide.addText("CELEBRATING THE JOURNEY OF", {
             x: 1,
-            y: 1.3,
+            y: 1.2,
             w: 11,
-            h: 0.5,
-            fontSize: 24,
+            h: 0.4,
+            fontSize: 16,
+            bold: true,
             align: "center",
-            color: "5C4632"
+            color: "7A6652"
         });
 
         slide.addText(data.personName || "Person Name", {
@@ -45,62 +47,62 @@ app.post("/generate-pptx", async (req, res) => {
             fontSize: 38,
             bold: true,
             align: "center",
-            color: "5C4632"
+            color: "4D3B2B"
         });
 
         slide.addText(data.jobPosition || "", {
             x: 1,
             y: 3,
             w: 11,
-            h: 0.5,
-            fontSize: 22,
-            align: "center"
+            h: 0.4,
+            fontSize: 20,
+            align: "center",
+            color: "6D6259"
         });
 
         slide.addText(data.companyName || "", {
             x: 1,
-            y: 3.6,
+            y: 3.55,
             w: 11,
-            h: 0.5,
-            fontSize: 20,
-            align: "center"
+            h: 0.4,
+            fontSize: 18,
+            align: "center",
+            color: "6D6259"
         });
 
-
-        // Slide 2 - Years
+        // Slide 2
         slide = pptx.addSlide();
 
-        slide.addText("Years of Dedication", {
+        slide.addText("A JOURNEY OF DEDICATION", {
             x: 1,
-            y: 1.5,
+            y: 1,
             w: 11,
-            h: 0.6,
-            fontSize: 30,
+            h: 0.5,
+            fontSize: 28,
             bold: true,
             align: "center"
         });
 
         slide.addText(String(data.yearsWorked || "0"), {
             x: 1,
-            y: 2.5,
+            y: 2,
             w: 11,
             h: 1,
-            fontSize: 50,
+            fontSize: 52,
             bold: true,
             align: "center"
         });
 
         slide.addText("Years of valuable service", {
             x: 1,
-            y: 3.7,
+            y: 3.3,
             w: 11,
             h: 0.5,
             fontSize: 20,
             align: "center"
         });
 
-
-        // Slide 3 - Achievements
+        // Slide 3
         slide = pptx.addSlide();
 
         slide.addText("Achievements", {
@@ -119,13 +121,12 @@ app.post("/generate-pptx", async (req, res) => {
             w: 10,
             h: 3,
             fontSize: 20,
-            valign: "mid",
             align: "center",
+            valign: "mid",
             margin: 0.2
         });
 
-
-        // Slide 4 - Memories
+        // Slide 4
         slide = pptx.addSlide();
 
         slide.addText("Special Memories", {
@@ -138,19 +139,21 @@ app.post("/generate-pptx", async (req, res) => {
             align: "center"
         });
 
-        slide.addText(data.memories || "Special memories will appear here.", {
-            x: 1.5,
-            y: 2,
-            w: 10,
-            h: 3,
-            fontSize: 20,
-            valign: "mid",
-            align: "center",
-            margin: 0.2
-        });
+        slide.addText(
+            data.memories || "Special memories will appear here.",
+            {
+                x: 1.5,
+                y: 2,
+                w: 10,
+                h: 3,
+                fontSize: 20,
+                align: "center",
+                valign: "mid",
+                margin: 0.2
+            }
+        );
 
-
-        // Slide 5 - Farewell Message
+        // Slide 5
         slide = pptx.addSlide();
 
         slide.addText("Farewell Message", {
@@ -172,12 +175,11 @@ app.post("/generate-pptx", async (req, res) => {
                 w: 10,
                 h: 3,
                 fontSize: 22,
-                valign: "mid",
                 align: "center",
+                valign: "mid",
                 margin: 0.2
             }
         );
-
 
         // Slide 6 - Photos
         if (data.photos && data.photos.length > 0) {
@@ -214,12 +216,7 @@ app.post("/generate-pptx", async (req, res) => {
                 });
 
             }
-
         }
-
-
-        // Create PowerPoint
-        const fileName = "office-farewell-presentation.pptx";
 
         const buffer = await pptx.write({
             outputType: "nodebuffer"
@@ -229,7 +226,7 @@ app.post("/generate-pptx", async (req, res) => {
             "Content-Type":
                 "application/vnd.openxmlformats-officedocument.presentationml.presentation",
             "Content-Disposition":
-                `attachment; filename="${fileName}"`,
+                'attachment; filename="office-farewell-presentation.pptx"',
             "Content-Length": buffer.length
         });
 
@@ -244,8 +241,8 @@ app.post("/generate-pptx", async (req, res) => {
         });
 
     }
-
 });
 
-
-module.exports = app;
+app.listen(PORT, () => {
+    console.log(`SlideIQ running at http://localhost:${PORT}`);
+});

@@ -5,644 +5,983 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PresentAI</title>
+    <title>SlideIQ — Create Beautiful Presentations</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HOME SCREEN -->
+<div class="app">
 
-    <div id="homeScreen" class="home-page">
+    <!-- NAVBAR -->
+    <nav class="navbar">
 
-        <nav class="navbar">
+        <div class="logo">
+            <div class="logo-mark">S</div>
+            <span>SlideIQ</span>
+        </div>
 
-            <div class="logo">
-                PresentAI
-            </div>
+        <div class="nav-links">
+            <a href="#" onclick="showScreen('homeScreen')">Home</a>
+            <a href="#features">Features</a>
+            <a href="#themes">Themes</a>
+        </div>
 
-            <div class="nav-links">
-                <span>Features</span>
-                <span>Themes</span>
-                <span>About</span>
-            </div>
+        <button class="nav-create" onclick="startCreating()">
+            Create Presentation
+        </button>
 
-        </nav>
+    </nav>
 
 
-        <section class="hero">
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="homeScreen" class="screen home-page">
+
+        <div class="hero">
 
             <div class="hero-text">
 
-                <div class="badge">
-                    ✨ Create presentations easily
+                <div class="eyebrow">
+                    ✦ SMART PRESENTATION CREATOR
                 </div>
 
                 <h1>
                     Turn your ideas into
-                    <span>beautiful presentations.</span>
+                    <span>beautiful slides.</span>
                 </h1>
 
                 <p>
-                    Create professional presentations in minutes.
-                    Add your details, photos and choose a theme.
+                    Create elegant presentations for work, celebrations
+                    and special moments — without spending hours designing.
                 </p>
 
-                <button class="hero-button" onclick="startCreating()">
-                    Create Presentation →
-                </button>
+                <div class="hero-actions">
 
-                <div class="small-text">
-                    No design skills required
+                    <button class="primary-button" onclick="startCreating()">
+                        Create Presentation
+                        <span>→</span>
+                    </button>
+
+                    <div class="hero-note">
+                        <strong>Simple.</strong> Creative. Ready to download.
+                    </div>
+
+                </div>
+
+                <div class="hero-trust">
+                    <span>✓ No design skills required</span>
+                    <span>✓ PPTX download</span>
+                    <span>✓ Up to 6 photos</span>
                 </div>
 
             </div>
 
 
-            <div class="hero-preview">
+            <div class="hero-visual">
 
-                <div class="preview-card">
+                <div class="glow glow-one"></div>
+                <div class="glow glow-two"></div>
 
-                    <div class="preview-top">
-                        <span>Presentation Preview</span>
-                        <span>● ● ●</span>
+                <div class="presentation-card">
+
+                    <div class="browser-bar">
+                        <div class="browser-dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <span>SlideIQ</span>
                     </div>
 
-                    <div class="preview-content">
+                    <div class="mock-slide">
 
-                        <div class="preview-line small"></div>
+                        <div class="mock-small">
+                            CELEBRATING THE JOURNEY
+                        </div>
 
                         <h2>
-                            Celebrating<br>
-                            the Journey
+                            A Beautiful<br>
+                            New Beginning
                         </h2>
 
-                        <div class="preview-line"></div>
+                        <div class="mock-line"></div>
 
-                        <div class="preview-box">
-                            📸
+                        <p>
+                            With gratitude & best wishes
+                        </p>
+
+                        <div class="mock-circle">
+                            ✦
                         </div>
 
                     </div>
 
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <section class="features">
-
-            <div class="feature-card">
-
-                <div class="feature-icon">📝</div>
-
-                <h3>
-                    Easy to Create
-                </h3>
-
-                <p>
-                    Enter your information and let the generator do the work.
-                </p>
-
-            </div>
-
-
-            <div class="feature-card">
-
-                <div class="feature-icon">🎨</div>
-
-                <h3>
+                <div class="floating-card floating-one">
+                    <span>🎨</span>
                     Beautiful Themes
-                </h3>
+                </div>
 
-                <p>
-                    Choose a style that matches your event and presentation.
-                </p>
+                <div class="floating-card floating-two">
+                    <span>✓</span>
+                    Ready to Download
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURES -->
+
+        <div id="features" class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon purple">
+                    ✦
+                </div>
+
+                <div>
+                    <h3>Easy to Create</h3>
+                    <p>
+                        Add your information and let SlideIQ build your presentation.
+                    </p>
+                </div>
 
             </div>
 
 
             <div class="feature-card">
 
-                <div class="feature-icon">📥</div>
+                <div class="feature-icon pink">
+                    ◈
+                </div>
 
-                <h3>
-                    Download PPTX
-                </h3>
-
-                <p>
-                    Get your finished presentation as a PowerPoint file.
-                </p>
+                <div>
+                    <h3>Elegant Designs</h3>
+                    <p>
+                        Choose a beautiful theme that matches your occasion.
+                    </p>
+                </div>
 
             </div>
 
-        </section>
 
-    </div>
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+                    ↓
+                </div>
+
+                <div>
+                    <h3>Download as PPTX</h3>
+                    <p>
+                        Get your finished presentation as a PowerPoint file.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-    <!-- PRESENTATION TYPE SCREEN -->
+    <!-- =========================
+         STEP 1
+    ========================== -->
 
-    <div id="typeScreen" class="screen hidden">
+    <section id="typeScreen" class="screen creator-screen hidden">
 
         <div class="page-header">
 
-            <div class="step-label">
-                STEP 1 OF 3
+            <div>
+
+                <div class="step-label">
+                    STEP 01 / 03
+                </div>
+
+                <h1>
+                    What are you creating?
+                </h1>
+
+                <p>
+                    Choose a presentation type to get started.
+                </p>
+
             </div>
 
-            <h1>
-                What do you want to create?
-            </h1>
-
-            <p>
-                Choose a presentation type to get started.
-            </p>
+            <button class="back-button"
+                    onclick="showScreen('homeScreen')">
+                ← Back
+            </button>
 
         </div>
 
 
         <div class="presentation-options">
 
-            <button
-                class="presentation-card"
-                onclick="selectType('Office Farewell')"
-            >
+            <div class="presentation-card farewell"
+                 onclick="selectType('Office Farewell')">
+
+                <div class="card-number">
+                    01
+                </div>
 
                 <div class="card-icon">
                     🎉
                 </div>
 
-                <div>
-                    <h2>
-                        Office Farewell
-                    </h2>
+                <div class="card-content">
+
+                    <h2>Office Farewell</h2>
 
                     <p>
-                        Celebrate someone's journey and memories.
+                        Celebrate someone's journey, achievements
+                        and unforgettable memories.
                     </p>
+
                 </div>
 
-                <span class="card-arrow">
+                <div class="card-arrow">
                     →
-                </span>
+                </div>
 
-            </button>
+            </div>
 
 
-            <button
-                class="presentation-card"
-                onclick="selectType('Office Presentation')"
-            >
+            <div class="presentation-card business"
+                 onclick="selectType('Office Presentation')">
+
+                <div class="card-number">
+                    02
+                </div>
 
                 <div class="card-icon">
                     💼
                 </div>
 
-                <div>
-                    <h2>
-                        Office Presentation
-                    </h2>
+                <div class="card-content">
+
+                    <h2>Office Presentation</h2>
 
                     <p>
-                        Create a professional business presentation.
+                        Create a clean and professional business presentation.
                     </p>
+
                 </div>
 
-                <span class="card-arrow">
+                <div class="card-arrow">
                     →
-                </span>
+                </div>
 
-            </button>
+            </div>
 
 
-            <button
-                class="presentation-card"
-                onclick="selectType('Birthday')"
-            >
+            <div class="presentation-card birthday"
+                 onclick="selectType('Birthday')">
+
+                <div class="card-number">
+                    03
+                </div>
 
                 <div class="card-icon">
                     🎂
                 </div>
 
-                <div>
-                    <h2>
-                        Birthday
-                    </h2>
+                <div class="card-content">
+
+                    <h2>Birthday</h2>
 
                     <p>
-                        Create a memorable birthday presentation.
+                        Create a memorable presentation for someone's special day.
                     </p>
+
                 </div>
 
-                <span class="card-arrow">
+                <div class="card-arrow">
                     →
-                </span>
+                </div>
 
-            </button>
+            </div>
 
 
-            <button
-                class="presentation-card"
-                onclick="selectType('School Event')"
-            >
+            <div class="presentation-card school"
+                 onclick="selectType('School Event')">
+
+                <div class="card-number">
+                    04
+                </div>
 
                 <div class="card-icon">
                     🎓
                 </div>
 
-                <div>
-                    <h2>
-                        School Event
-                    </h2>
+                <div class="card-content">
+
+                    <h2>School Event</h2>
 
                     <p>
-                        Build presentations for school events.
+                        Build an engaging presentation for school events.
                     </p>
+
                 </div>
 
-                <span class="card-arrow">
+                <div class="card-arrow">
                     →
-                </span>
+                </div>
 
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 2
+    ========================== -->
+
+    <section id="farewellScreen" class="screen editor-screen hidden">
+
+        <div class="editor-top">
+
+            <div>
+
+                <div class="step-label">
+                    STEP 02 / 03
+                </div>
+
+                <h1>
+                    Create your farewell
+                </h1>
+
+                <p>
+                    Add a few details and we'll turn them into a beautiful presentation.
+                </p>
+
+            </div>
+
+            <button class="back-button"
+                    onclick="showScreen('typeScreen')">
+                ← Change Type
             </button>
 
         </div>
 
-    </div>
+
+        <div class="editor-layout">
 
 
-    <!-- FAREWELL FORM -->
+            <!-- LEFT FORM -->
 
-    <div id="farewellScreen" class="screen hidden">
+            <div class="editor-panel">
+
+
+                <!-- PERSON -->
+
+                <div class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-icon">
+                            👤
+                        </div>
+
+                        <div>
+                            <h2>About the Person</h2>
+                            <p>Basic information</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-grid">
+
+                        <div class="input-group">
+
+                            <label>Person Name</label>
+
+                            <input
+                                type="text"
+                                id="personName"
+                                placeholder="e.g. Sarah Johnson"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Job Position</label>
+
+                            <input
+                                type="text"
+                                id="jobPosition"
+                                placeholder="e.g. Senior Manager"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Company / Organization</label>
+
+                            <input
+                                type="text"
+                                id="companyName"
+                                placeholder="e.g. ABC Company"
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label>Years Worked</label>
+
+                            <input
+                                type="number"
+                                id="yearsWorked"
+                                placeholder="e.g. 10"
+                                min="0"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JOURNEY -->
+
+                <div class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-icon">
+                            ✦
+                        </div>
+
+                        <div>
+                            <h2>Their Journey</h2>
+                            <p>Achievements and memories</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Achievements</label>
+
+                        <textarea
+                            id="achievements"
+                            placeholder="What did they achieve during their journey?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Special Memories</label>
+
+                        <textarea
+                            id="memories"
+                            placeholder="Share some special memories..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-icon">
+                            ♡
+                        </div>
+
+                        <div>
+                            <h2>Farewell Message</h2>
+                            <p>A personal message</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Message</label>
+
+                        <textarea
+                            id="farewellMessage"
+                            placeholder="Write a warm farewell message..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHOTOS -->
+
+                <div class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-icon">
+                            ◉
+                        </div>
+
+                        <div>
+                            <h2>Photos</h2>
+                            <p>Add up to 6 memories</p>
+                        </div>
+
+                    </div>
+
+
+                    <label class="upload-area">
+
+                        <input
+                            type="file"
+                            id="photos"
+                            accept="image/*"
+                            multiple
+                        >
+
+                        <div class="upload-symbol">
+                            ↑
+                        </div>
+
+                        <strong>
+                            Add your photos
+                        </strong>
+
+                        <span>
+                            Click here to choose up to 6 images
+                        </span>
+
+                    </label>
+
+
+                    <div id="selectedPhotoCount"
+                         class="photo-count">
+                        No photos selected
+                    </div>
+
+                </div>
+
+
+                <!-- THEMES -->
+
+                <div id="themes" class="editor-section">
+
+                    <div class="section-heading">
+
+                        <div class="section-icon">
+                            🎨
+                        </div>
+
+                        <div>
+                            <h2>Choose a Theme</h2>
+                            <p>Select your presentation style</p>
+                        </div>
+
+                    </div>
+
+
+                    <input
+                        type="hidden"
+                        id="selectedTheme"
+                        value="elegant"
+                    >
+
+
+                    <div class="theme-options">
+
+                        <button
+                            type="button"
+                            class="theme-button selected"
+                            onclick="selectTheme('elegant')">
+
+                            <span class="theme-preview elegant-preview"></span>
+
+                            <strong>Elegant</strong>
+
+                            <small>Warm & timeless</small>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="theme-button"
+                            onclick="selectTheme('professional')">
+
+                            <span class="theme-preview professional-preview"></span>
+
+                            <strong>Professional</strong>
+
+                            <small>Clean & modern</small>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="theme-button"
+                            onclick="selectTheme('celebration')">
+
+                            <span class="theme-preview celebration-preview"></span>
+
+                            <strong>Celebration</strong>
+
+                            <small>Bright & joyful</small>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="theme-button"
+                            onclick="selectTheme('simple')">
+
+                            <span class="theme-preview simple-preview"></span>
+
+                            <strong>Simple</strong>
+
+                            <small>Minimal & calm</small>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="generate-button"
+                    onclick="generatePresentation()">
+
+                    <span>
+                        Generate Presentation
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- RIGHT PREVIEW -->
+
+            <div class="live-preview">
+
+                <div class="preview-toolbar">
+
+                    <div>
+                        <span class="live-dot"></span>
+                        Live Preview
+                    </div>
+
+                    <span>
+                        16 : 9
+                    </span>
+
+                </div>
+
+
+                <div class="preview-stage">
+
+                    <div id="liveSlide"
+                         class="live-slide theme-elegant">
+
+                        <div class="slide-decoration">
+                            ✦
+                        </div>
+
+                        <div class="live-small">
+                            CELEBRATING THE JOURNEY OF
+                        </div>
+
+                        <h2 id="previewName">
+                            Person Name
+                        </h2>
+
+                        <div class="live-line"></div>
+
+                        <p id="previewPosition">
+                            Job Position
+                        </p>
+
+                        <p id="previewCompany">
+                            Company / Organization
+                        </p>
+
+                        <div class="live-footer">
+                            With gratitude & best wishes
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="preview-hint">
+                    Your presentation will be generated from these details.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 3
+    ========================== -->
+
+    <section id="previewScreen" class="screen final-preview-screen hidden">
 
         <div class="page-header">
 
-            <div class="step-label">
-                STEP 2 OF 3
-            </div>
+            <div>
 
-            <h1>
-                Create your farewell presentation
-            </h1>
-
-            <p>
-                Tell us about the person and we'll create the presentation for you.
-            </p>
-
-        </div>
-
-
-        <div class="form">
-
-            <div class="form-section">
-
-                <h2>
-                    👤 About the Person
-                </h2>
-
-                <p class="section-description">
-                    Basic information about the person you're celebrating.
-                </p>
-
-                <label>
-                    Person Name
-                </label>
-
-                <input
-                    type="text"
-                    id="personName"
-                    placeholder="Example: Nimal Perera"
-                >
-
-
-                <label>
-                    Job Position
-                </label>
-
-                <input
-                    type="text"
-                    id="jobPosition"
-                    placeholder="Example: Senior Manager"
-                >
-
-
-                <label>
-                    Company / Organization
-                </label>
-
-                <input
-                    type="text"
-                    id="companyName"
-                    placeholder="Example: ABC Company"
-                >
-
-
-                <label>
-                    Years Worked
-                </label>
-
-                <input
-                    type="number"
-                    id="yearsWorked"
-                    placeholder="Example: 10"
-                >
-
-            </div>
-
-
-            <div class="form-divider"></div>
-
-
-            <div class="form-section">
-
-                <h2>
-                    🏆 Their Journey
-                </h2>
-
-                <p class="section-description">
-                    Add achievements and special memories.
-                </p>
-
-                <label>
-                    Achievements
-                </label>
-
-                <textarea
-                    id="achievements"
-                    placeholder="Example: Led several successful projects, supported the team and helped improve the workplace..."
-                ></textarea>
-
-
-                <label>
-                    Special Memories
-                </label>
-
-                <textarea
-                    id="memories"
-                    placeholder="Write some memorable moments, stories or experiences..."
-                ></textarea>
-
-            </div>
-
-
-            <div class="form-divider"></div>
-
-
-            <div class="form-section">
-
-                <h2>
-                    💌 Farewell Message
-                </h2>
-
-                <p class="section-description">
-                    Write a personal message for the farewell.
-                </p>
-
-                <label>
-                    Message
-                </label>
-
-                <textarea
-                    id="farewellMessage"
-                    placeholder="Example: Thank you for all the wonderful memories. We wish you happiness and success in your next chapter..."
-                ></textarea>
-
-            </div>
-
-
-            <div class="form-divider"></div>
-
-
-            <div class="form-section">
-
-                <h2>
-                    📸 Photos
-                </h2>
-
-                <p class="section-description">
-                    Upload up to 6 photos to make the presentation personal.
-                </p>
-
-                <div class="upload-area" onclick="document.getElementById('photos').click()">
-
-    <div class="upload-icon">📷</div>
-
-    <h3>Upload Photos</h3>
-
-    <p>Drag & drop or click to choose up to 6 photos</p>
-
-    <input
-        type="file"
-        id="photos"
-        accept="image/*"
-        multiple
-        hidden
-    >
-
-</div>
-
-<div id="selectedPhotoCount" class="photo-count">
-    No photos selected
-</div>
-
-            </div>
-
-
-            <div class="form-divider"></div>
-
-
-            <div class="form-section">
-
-                <h2>
-                    🎨 Choose a Theme
-                </h2>
-
-                <p class="section-description">
-                    Select a style for your presentation.
-                </p>
-
-
-                <div class="theme-options">
-
-                    <button
-                        type="button"
-                        onclick="selectTheme('elegant')"
-                    >
-                        🌿 Elegant
-                    </button>
-
-                    <button
-                        type="button"
-                        onclick="selectTheme('professional')"
-                    >
-                        💼 Professional
-                    </button>
-
-                    <button
-                        type="button"
-                        onclick="selectTheme('celebration')"
-                    >
-                        🎉 Celebration
-                    </button>
-
-                    <button
-                        type="button"
-                        onclick="selectTheme('simple')"
-                    >
-                        ✨ Simple
-                    </button>
-
+                <div class="step-label">
+                    STEP 03 / 03
                 </div>
 
+                <h1>
+                    Your presentation is ready
+                </h1>
 
-                <input
-                    type="hidden"
-                    id="selectedTheme"
-                    value="elegant"
-                >
+                <p>
+                    Review your slides before downloading the PowerPoint file.
+                </p>
 
             </div>
 
-
             <button
-                class="generate-button"
-                onclick="generatePresentation()"
-            >
-                Generate Presentation →
+                class="back-button"
+                onclick="showScreen('farewellScreen')">
+
+                ← Edit Presentation
+
             </button>
 
         </div>
 
-    </div>
+
+        <div class="final-preview">
+
+            <!-- COVER -->
+
+            <div class="final-slide cover-slide theme-elegant">
+
+                <div class="final-decoration">
+                    ✦
+                </div>
+
+                <div class="final-small">
+                    CELEBRATING THE JOURNEY OF
+                </div>
+
+                <h2 id="finalPreviewName">
+                    Person Name
+                </h2>
+
+                <div class="final-line"></div>
+
+                <p id="finalPreviewPosition">
+                    Job Position
+                </p>
+
+                <p id="finalPreviewCompany">
+                    Company / Organization
+                </p>
+
+                <div class="final-footer">
+                    With gratitude & best wishes
+                </div>
+
+            </div>
 
 
-    <!-- PREVIEW SCREEN -->
+            <!-- YEARS -->
 
-    <div id="previewScreen" class="screen hidden">
+            <div class="final-slide dedication-slide">
 
-        <h1>
-            Presentation Preview
-        </h1>
+                <div class="final-icon">
+                    ✦
+                </div>
+
+                <div class="final-small dark">
+                    A JOURNEY OF DEDICATION
+                </div>
+
+                <h3>
+                    Years of Service
+                </h3>
+
+                <div class="years-number">
+
+                    <strong id="previewYears">
+                        0
+                    </strong>
+
+                    <span>
+                        Years
+                    </span>
+
+                </div>
+
+                <p>
+                    Years of valuable service, commitment and contribution.
+                </p>
+
+            </div>
 
 
-        <div class="slide cover-slide">
+            <!-- ACHIEVEMENTS -->
 
-    <div class="cover-decoration">
-        ✦
-    </div>
+            <div class="final-slide text-slide">
 
-    <p class="cover-small-title">
-        CELEBRATING THE JOURNEY OF
-    </p>
+                <div class="final-icon">
+                    ✦
+                </div>
 
-    <h1 id="previewName">
-        Person Name
-    </h1>
+                <div class="final-small dark">
+                    THE JOURNEY
+                </div>
 
-    <div class="cover-line"></div>
+                <h3>
+                    Achievements
+                </h3>
 
-    <p id="previewPosition">
-        Job Position
-    </p>
+                <p id="previewAchievements">
+                    Achievements will appear here.
+                </p>
 
-    <p id="previewCompany">
-        Company
-    </p>
+            </div>
 
-    <div class="cover-footer">
-        With gratitude &amp; best wishes
-    </div>
+
+            <!-- MEMORIES -->
+
+            <div class="final-slide text-slide">
+
+                <div class="final-icon">
+                    ♡
+                </div>
+
+                <div class="final-small dark">
+                    MOMENTS TO REMEMBER
+                </div>
+
+                <h3>
+                    Special Memories
+                </h3>
+
+                <p id="previewMemories">
+                    Special memories will appear here.
+                </p>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div class="final-slide message-slide">
+
+                <div class="final-icon">
+                    ♡
+                </div>
+
+                <div class="final-small dark">
+                    WITH GRATITUDE
+                </div>
+
+                <h3>
+                    Farewell Message
+                </h3>
+
+                <p id="previewMessage">
+                    Farewell message will appear here.
+                </p>
+
+            </div>
+
+
+            <!-- PHOTOS -->
+
+            <div class="final-slide photos-slide">
+
+                <div class="final-icon">
+                    ◉
+                </div>
+
+                <div class="final-small dark">
+                    MEMORABLE MOMENTS
+                </div>
+
+                <h3>
+                    Memories Together
+                </h3>
+
+                <div id="photoPreview"
+                     class="photo-grid">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="final-actions">
+
+            <button
+                class="back-button"
+                onclick="showScreen('farewellScreen')">
+
+                ← Edit
+
+            </button>
+
+            <button
+                class="download-button"
+                onclick="downloadAgain()">
+
+                ↓ Download PowerPoint
+
+            </button>
+
+        </div>
+
+    </section>
 
 </div>
 
 
-        <div class="slide dedication-slide">
-
-    <div class="dedication-icon">
-        🏆
-    </div>
-
-    <p class="dedication-label">
-        A JOURNEY OF DEDICATION
-    </p>
-
-    <h2>
-        Years of Service
-    </h2>
-
-    <div class="years-number">
-        <span id="previewYears">0</span>
-        <span class="years-text">Years</span>
-    </div>
-
-    <p class="dedication-description">
-        Years of valuable service, commitment and contribution
-    </p>
-
-</div>
-
-
-        <div class="slide">
-
-            <h2>
-                Achievements
-            </h2>
-
-            <p id="previewAchievements">
-                Achievements will appear here.
-            </p>
-
-        </div>
-
-
-        <div class="slide">
-
-            <h2>
-                Special Memories
-            </h2>
-
-            <p id="previewMemories">
-                Special memories will appear here.
-            </p>
-
-        </div>
-
-
-        <div class="slide">
-
-            <h2>
-                Farewell Message
-            </h2>
-
-            <p id="previewMessage">
-                Farewell message will appear here.
-            </p>
-
-        </div>
-
-
-        <div class="slide">
-
-            <h2>
-                Memorable Moments
-            </h2>
-
-            <div
-                id="photoPreview"
-                class="photo-grid"
-            ></div>
-
-        </div>
-
-    </div>
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
